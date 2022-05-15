@@ -75,9 +75,6 @@ span.password {
 <h2>Login Form</h2>
 
 <form action="process_signin.php" method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
 
   <div class="container">
     <label for="email"><b>Email</b></label>
