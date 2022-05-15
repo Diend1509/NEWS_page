@@ -1,6 +1,5 @@
 <ul>
 	<li>
-		<a href=""><h1>Quản lý người dùng</h1></a>
+		<a href="..\User\list_u.php"><h1>Quản lý người dùng</h1></a>
 	</li>
-
 </ul>
