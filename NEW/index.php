@@ -12,6 +12,7 @@
 
 </head>
 <body>
+
 <a href="index.php"> <h1>Trang chủ!</h1> </a>
 <a href="form_php.php"> Thêm bài viết</a>
 <a href="../signout.php">Đăng xuất</a>
@@ -21,6 +22,7 @@
 
 <?php
 include 'connect.php';
+
 
 
 
@@ -87,32 +89,32 @@ $ket_qua= mysqli_query($ket_noi,$sql);
 	</tr>	
 
 <?php foreach($ket_qua as $tung_bai_tin_tuc){ ?>
-<ul>
-	<li>
+<tr>
+	<td>
 		<?php echo $tung_bai_tin_tuc['ma'] ?>	
-	<!-- </li> -->
-	<!-- <li> -->
+	</td>
+	<td>
 		<a href="show.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>"> 
 		<?php echo $tung_bai_tin_tuc['tieu_de'] ?>
 		</a>
-	<!-- </li>	 -->
+	</td>	
 
-	<!-- <li width="40%"> -->
+	<td width="40%">
 		<img src="<?php echo $tung_bai_tin_tuc['anh'] ?>">
-	<!-- </li> -->
+	</td>
 
-	<!-- <li align="center"> -->
+	<td align="center">
 		<a href="form_update.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>">
 			sửa
 		</a>
-	<!-- </li> -->
-	<!-- <li align="center"> -->
+	</td>
+	<td align="center">
 		<a href="delete.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>">
 			Xóa
 		</a>
-	</li>
+	</td>
 	
-</ul>
+</tr>
 <?php } ?>
 
 
