@@ -2,7 +2,6 @@
 session_start();
 if(empty($_SESSION['level'])){
     header('location:index.php');
-    alert "admin mới được làm thế!!";
 }
 ?>
 <!DOCTYPE html>
