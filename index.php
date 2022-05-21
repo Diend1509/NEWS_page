@@ -75,6 +75,7 @@ a:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 </style>
 </head>
 <body>
@@ -83,7 +84,7 @@ a:active {
 <div class="bg-img">
     <div class="container">
       <div class="topnav">
-        <a href="index.php">Home</a>
+        <a href="index.php" >Home</a>
         <a href="signin.php">Đăng nhập </a>
         <a href="signup.php">Đăng ký </a>
         <a href="about_us.php">About us</a>
