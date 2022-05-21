@@ -61,7 +61,7 @@ a:hover{
 }
 
 a:hover {
-  background-color: royalblue;
+  background-color: white;
 }
 </style>
 </head>
