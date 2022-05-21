@@ -57,6 +57,7 @@
 <a href="index.php"> <h1>Trang chủ!</h1> </a>
 <a href="form_php.php"> Thêm bài viết</a>
 <a href="../signout.php">Đăng xuất</a>
+
 <?php if($_SESSION['level']==1){
 	include '../menu.php';
 } ?>
@@ -83,7 +84,7 @@ $mang_so_tin_tuc= mysqli_query($ket_noi,$spl_so_tin_tuc);
 $ket_qua_so_tin_tuc = mysqli_fetch_array($mang_so_tin_tuc);
 $so_tin_tuc=$ket_qua_so_tin_tuc['count(*)'];
 
-$so_tin_tuc_tren_1_trang=3;
+$so_tin_tuc_tren_1_trang=4;
 
 
 $so_trang=ceil($so_tin_tuc / $so_tin_tuc_tren_1_trang);
