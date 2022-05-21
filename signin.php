@@ -64,15 +64,23 @@ span.password {
      width: 100%;
   }
 }
+a:hover {
+  background-color: violet;
+}
 </style>
 </head>
 <body>
-	<a href="index.php">Trang chủ</a>
+  <div class="container">
+    <a href="index.php">Trang chủ</a>
+  </div>
+	
+
+
 	<?php if ( isset($_GET['error']) ) {
  	echo $_GET['error'];
  } ?>
 
-<h2>Login Form</h2>
+<h2>Login</h2>
 
 <form action="process_signin.php" method="post">
 
