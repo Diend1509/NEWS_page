@@ -9,6 +9,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title></title>
+	<style type="text/css">
+
+		//css của nút chuyển trang
+		.w3-button{
+			border:none;
+			display:inline-block;
+			padding:8px 16px;
+			vertical-align:middle;
+			overflow:hidden;
+			text-decoration:none;
+			color:inherit;
+			background-color:inherit;
+			text-align:center;
+			cursor:pointer;
+			white-space:nowrap}
+		.w3-button:hover{
+			color:#000!important;
+			background-color:#f44336!important}
+
+		//css của bảng
+		.w3-table-all{
+			border-collapse:collapse;
+			border-spacing:0;
+			width:100%;
+			display:table}
+		.w3-table-all{
+			border:1px solid #ccc}
+		.w3-table-all tr{border-bottom:1px solid #ddd}
+		.w3-table-all tr:nth-child(odd){background-color:#fff}
+		.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
+		.w3-table-all td,.w3-table-all th{
+			padding:8px 8px;
+			display:table-cell;
+			text-align:left;
+			vertical-align:top}
+		.w3-table-all th:first-child,
+		.w3-table-all td:first-child{padding-left:16px}
+		.w3-hover-black:hover{
+			color:#fff!important;
+			background-color:#607d8b!important}
+	</style>
 
 </head>
 <body>
@@ -74,12 +115,13 @@ limit $so_tin_tuc_tren_1_trang offset $bo_qua";
 $ket_qua= mysqli_query($ket_noi,$sql);
 
 ?>
-<table border="1" width="100%">
+<table class="w3-table-all">
 	<caption>
 		<form>
 			<input type="search" name="tim_kiem" value="<?php echo $tim_kiem ?>">
 		</form>
 	</caption>
+	<thead>
 	<tr>
 		<th>Mã</th>
 		<th>Tiêu đề</th>
@@ -87,9 +129,9 @@ $ket_qua= mysqli_query($ket_noi,$sql);
 		<th>Sửa</th>
 		<th>Xóa</th>
 	</tr>	
-
+	</thead>
 <?php foreach($ket_qua as $tung_bai_tin_tuc){ ?>
-<tr>
+<tr class="w3-hover-black">
 	<td>
 		<?php echo $tung_bai_tin_tuc['ma'] ?>	
 	</td>
@@ -120,7 +162,7 @@ $ket_qua= mysqli_query($ket_noi,$sql);
 
 </table>
 <?php for($i=1; $i<= $so_trang; $i++){ ?>
-<a href="?trang=<?php echo $i ?>&tim_kiem= <?php echo $tim_kiem ?>">
+<a href="?trang=<?php echo $i ?>&tim_kiem= <?php echo $tim_kiem ?>" class="w3-button">
 	<?php echo $i; ?>
 </a>
 
