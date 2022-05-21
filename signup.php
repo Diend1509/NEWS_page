@@ -66,6 +66,10 @@
 	     width: 100%;
 	  }
 	}
+	
+	a:hover {
+	  background-color: violet;
+	}
 	</style>
 </head>
 <body>
