@@ -26,7 +26,6 @@ body, html {
 
   color: white;
 }
-
 /* Position the navbar container inside the image */
 .container {
   position: ;
@@ -84,7 +83,7 @@ a:active {
 <div class="bg-img">
     <div class="container">
       <div class="topnav">
-        <a href="index.php" >Home</a>
+        <a href="index.php" >Home Page</a>
         <a href="signin.php">Đăng nhập </a>
         <a href="signup.php">Đăng ký </a>
         <a href="about_us.php">About us</a>
