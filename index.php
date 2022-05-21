@@ -56,7 +56,7 @@ body, html {
   background-color: #ddd;
   color: black;
 }
-.a {
+a {
   padding: 14px 16px;
   font-size: 18px;
   text-align: center;
@@ -68,9 +68,9 @@ body, html {
   /*border-radius: 15px;*/
   box-shadow: 0 9px #999;
 }
-.a:hover {background-color: #ddd}
+a:hover {background-color: #ddd}
 
-.a:active {
+a:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
