@@ -49,6 +49,8 @@
 		.w3-hover-black:hover{
 			color:#fff!important;
 			background-color:#607d8b!important}
+
+			
 	</style>
 
 </head>
@@ -77,10 +79,10 @@ $tim_kiem="";
 if(isset($_GET['tim_kiem'])){
 	$tim_kiem=$_GET['tim_kiem'];
 }
-$spl_so_tin_tuc = "select count(*) from tin_tuc
+$sql_so_tin_tuc = "select count(*) from tin_tuc
 where tieu_de
 like '%$tim_kiem%'";
-$mang_so_tin_tuc= mysqli_query($ket_noi,$spl_so_tin_tuc);
+$mang_so_tin_tuc= mysqli_query($ket_noi,$sql_so_tin_tuc);
 $ket_qua_so_tin_tuc = mysqli_fetch_array($mang_so_tin_tuc);
 $so_tin_tuc=$ket_qua_so_tin_tuc['count(*)'];
 
