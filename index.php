@@ -14,7 +14,7 @@ body, html {
   /* The image used */
   background-image: url("bg.jpg");
   
-  height: 70%;
+  height: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -29,11 +29,11 @@ body, html {
 
 /* Position the navbar container inside the image */
 .container {
-  position: absolute;
-  margin: 0px;
-  left: 950px;
-  top: 10px;
-  width: auto;
+  position: ;
+  margin: 0px;/*
+  Right: 750px;
+  top: 10px;*/
+  width: 100%;
 }
 
 /* The navbar */
@@ -58,11 +58,11 @@ body, html {
 }
 .a {
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   cursor: pointer;
   outline: none;
-  color: #fff;
+  color: #607d8b;
   background-color: #333;
   border: none;
   /*border-radius: 15px;*/
@@ -81,15 +81,14 @@ body, html {
 
 
 <div class="bg-img">
-  <h1>News page</h1>
-  <h2>Học viện công nghệ bưu chính viễn thông</h2>
-  <div class="container">
-    <div class="topnav">
-  		<a href="signin.php">Đăng nhập </a>
-  		<a href="signup.php">Đăng ký </a>
-  		<a href="about_us.php" ">About us</a>
+    <div class="container">
+      <div class="topnav">
+        <a href="index.php">Home</a>
+        <a href="signin.php">Đăng nhập </a>
+        <a href="signup.php">Đăng ký </a>
+        <a href="about_us.php">About us</a>
+      </div>
     </div>
-  </div>
 </div>
 
 
