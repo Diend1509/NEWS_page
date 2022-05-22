@@ -52,7 +52,7 @@
 
 	#div_tong{
 		width: 100%;
-		height: 800px;
+		height: auto;
 		background-color: #F0FFF0;
 	}
 	#div_tren{
@@ -109,16 +109,18 @@
 <body>
 <div id="div_tong">
 	<div id="div_tren">
-		<div class="trai" >
+		<div class="trai navbar" >
 			<a href="index.php"> 
-				Trang chủ! 
+				Home 
 			</a>
 			<?php if($_SESSION['level']==1){
 				include '../menu.php';
 			} ?>
 		</div>
-		<div class="giua"></div>
-		<div class="phai">
+		<div class="giua">
+			<p></p>
+		</div>
+		<div class="phai navbar">
 			<a href="form_php.php"> Thêm bài viết</a>
 			<a href="../signout.php">Đăng xuất</a>
 		</div>
@@ -230,14 +232,15 @@ $ket_qua= mysqli_query($ket_noi,$sql);
 
 
 	</table>
-</div>
-</div>
-<?php for($i=1; $i<= $so_trang; $i++){ ?>
-<a href="?trang=<?php echo $i ?>&tim_kiem= <?php echo $tim_kiem ?>" class="w3-button">
-	<?php echo $i; ?>
-</a>
+	<?php for($i=1; $i<= $so_trang; $i++){ ?>
+	<a href="?trang=<?php echo $i ?>&tim_kiem= <?php echo $tim_kiem ?>" class="w3-button">
+		<?php echo $i; ?>
+	</a>
 
-<?php } ?>	
+	<?php } ?>	
+</div>
+
+</div>
 
 
 </body>
