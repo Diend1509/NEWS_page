@@ -73,7 +73,11 @@
 	</style>
 </head>
 <body>
-
+	<?php 
+	if ( isset($_GET['error']) ) {
+	 	echo $_GET['error'];
+	 }
+	?>
 	<h1><a href="index.php">Trang chủ</a></h1>
 	<form action="process_signup.php" method="post">
 	  	<div class="container">
