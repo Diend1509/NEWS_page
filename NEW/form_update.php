@@ -142,7 +142,7 @@ $tin_tuc = mysqli_fetch_array($ket_qua);
 	    		<label for="img">Ảnh mới:</label>
 	      	</div>
 	    	<div class="col-75">
-	    		<input type="file" id="img" name="anh" accept="image/*" value="<?php echo $tin_tuc['anh'] ?>">
+	    		<input type="text" name="anh" placeholder="link ảnh..." value="<?php echo $tin_tuc['anh'] ?>">
 	      	</div>
 	    	
 		  	
