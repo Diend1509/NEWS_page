@@ -50,19 +50,81 @@
 			color:#fff!important;
 			background-color:#607d8b!important}
 
-			
+	#div_tong{
+		width: 100%;
+		height: 800px;
+		background-color: #F0FFF0;
+	}
+	#div_tren{
+		width: 100%;
+		height: 10%;
+		/*background-color: darkred;*/
+	}
+	#div_duoi{
+		width: 100%;
+		height: 90%;
+		/*background-color: blue;*/
+	}
+	#div_tren > .trai{
+		width: 30%;
+		height: 80%;
+		/*background-color: pink;*/
+		float: left;
+	}
+	#div_tren > .giua{
+		width: 50%;
+		height: 80%;
+		/*background-color: black;*/
+		float: left;
+	}
+	#div_tren > .phai{
+		width: 20%;
+		height: 80%;
+		float: left;
+	}
+	
+	//css của các nút
+	.navbar {
+	  overflow: hidden;
+	  background-color: #333;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+
+	a {
+	  float: left;
+	  font-size: 16px;
+	  color: #333;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+	a:hover {
+  		background-color: #333;
+  		color: #fff;
+	}
+
 	</style>
 
 </head>
 <body>
+<div id="div_tong">
+	<div id="div_tren">
+		<div class="trai" >
+			<a href="index.php"> 
+				Trang chủ! 
+			</a>
+			<?php if($_SESSION['level']==1){
+				include '../menu.php';
+			} ?>
+		</div>
+		<div class="giua"></div>
+		<div class="phai">
+			<a href="form_php.php"> Thêm bài viết</a>
+			<a href="../signout.php">Đăng xuất</a>
+		</div>
+	</div>
+	
 
-<a href="index.php"> <h1>Trang chủ!</h1> </a>
-<a href="form_php.php"> Thêm bài viết</a>
-<a href="../signout.php">Đăng xuất</a>
-
-<?php if($_SESSION['level']==1){
-	include '../menu.php';
-} ?>
 
 <?php
 include 'connect.php';
@@ -118,52 +180,58 @@ limit $so_tin_tuc_tren_1_trang offset $bo_qua";
 $ket_qua= mysqli_query($ket_noi,$sql);
 
 ?>
-<table class="w3-table-all">
-	<caption>
-		<form>
-			<input type="search" name="tim_kiem" value="<?php echo $tim_kiem ?>">
-		</form>
-	</caption>
-	<thead>
-	<tr>
-		<th>Mã</th>
-		<th>Tiêu đề</th>
-		<th>Ảnh</th>
-		<th>Sửa</th>
-		<th>Xóa</th>
-	</tr>	
-	</thead>
-<?php foreach($ket_qua as $tung_bai_tin_tuc){ ?>
-<tr class="w3-hover-black">
-	<td>
-		<?php echo $tung_bai_tin_tuc['ma'] ?>	
-	</td>
-	<td>
-		<a href="show.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>"> 
-		<?php echo $tung_bai_tin_tuc['tieu_de'] ?>
-		</a>
-	</td>	
+<div id="div_duoi">
+		
 
-	<td width="40%">
-		<img src="<?php echo $tung_bai_tin_tuc['anh'] ?>">
-	</td>
+	<table class="w3-table-all">
+		<caption>
+			<form>
+				Tìm kiếm :
+				<input type="search" placeholder="press keyword for seaching" name="tim_kiem" value="<?php echo $tim_kiem ?>">
+			</form>
+		</caption>
+		<thead>
+		<tr>
+			<th>Mã</th>
+			<th>Tiêu đề</th>
+			<th>Ảnh</th>
+			<th>Sửa</th>
+			<th>Xóa</th>
+		</tr>	
+		</thead>
+	<?php foreach($ket_qua as $tung_bai_tin_tuc){ ?>
+	<tr class="w3-hover-black">
+		<td>
+			<?php echo $tung_bai_tin_tuc['ma'] ?>	
+		</td>
+		<td>
+			<a href="show.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>"> 
+			<?php echo $tung_bai_tin_tuc['tieu_de'] ?>
+			</a>
+		</td>	
 
-	<td align="center">
-		<a href="form_update.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>">
-			sửa
-		</a>
-	</td>
-	<td align="center">
-		<a href="delete.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>">
-			Xóa
-		</a>
-	</td>
-	
-</tr>
-<?php } ?>
+		<td width="40%">
+			<img src="<?php echo $tung_bai_tin_tuc['anh'] ?>">
+		</td>
+
+		<td align="center">
+			<a href="form_update.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>">
+				sửa
+			</a>
+		</td>
+		<td align="center">
+			<a href="delete.php?ma= <?php echo $tung_bai_tin_tuc['ma'] ?>">
+				Xóa
+			</a>
+		</td>
+		
+	</tr>
+	<?php } ?>
 
 
-</table>
+	</table>
+</div>
+</div>
 <?php for($i=1; $i<= $so_trang; $i++){ ?>
 <a href="?trang=<?php echo $i ?>&tim_kiem= <?php echo $tim_kiem ?>" class="w3-button">
 	<?php echo $i; ?>
