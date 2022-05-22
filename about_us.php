@@ -59,10 +59,17 @@ a:hover{
     display: block;
   }
 }
-
-a:hover {
-  background-color: white;
-}
+  a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: black;
+  }
 </style>
 </head>
 <body>
@@ -71,7 +78,7 @@ a:hover {
   <h1>About Us Page</h1>
   <p>Nhóm 2</p>
   <p>Dưới đây là các thành viên trong nhóm</p>
-  <a href="index.php" ><h1>Cancel</h1></a>
+  <a href="index.php" >Cancel</a>
 </div>
 
 <h2 style="text-align:center">Our Team</h2>
