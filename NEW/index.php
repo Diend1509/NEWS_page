@@ -187,7 +187,7 @@ $ket_qua= mysqli_query($ket_noi,$sql);
 		<caption>
 			<form>
 				Tìm kiếm :
-				<input type="search" placeholder="press keyword for seaching" name="tim_kiem" value="<?php echo $tim_kiem ?>">
+				<input type="search" placeholder="press keyword for seaching" name="tim_kiem" value="<?php echo $tim_kiem ?>" >
 			</form>
 		</caption>
 		<thead>
