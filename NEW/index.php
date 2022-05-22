@@ -110,7 +110,7 @@
 <div id="div_tong">
 	<div id="div_tren">
 		<div class="trai navbar" >
-			<a href="index.php"> 
+			<a href="index.php" style="background-color: #45a049; color: whitesmoke;"> 
 				Home 
 			</a>
 			<?php if($_SESSION['level']==1){
