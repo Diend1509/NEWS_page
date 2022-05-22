@@ -103,10 +103,11 @@ if(empty($_SESSION['level'])){
 
 	    <div class="row">
 	    	<div class="col-25">
-	    		<label for="img">Ảnh:</label>
+	    		<label for="img">Ảnh(chọn tệp hoặc link):</label>
 	      	</div>
 	    	<div class="col-75">
 	    		<input type="file" id="img" name="anh" accept="image/*">
+	    		<input type="text" name="anh" placeholder="link ảnh...">
 	      	</div>
 	    	
 		  	
