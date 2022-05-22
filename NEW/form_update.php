@@ -136,7 +136,17 @@ $tin_tuc = mysqli_fetch_array($ket_qua);
 	    </div>
 
 	    <div class="row">
-	    	<img src="<?php echo $tin_tuc['anh'] ?>">
+	      <div class="col-25">
+	        <label for="noi_dung">Ảnh cũ</label>
+	      </div>
+	      <div class="col-75">
+	        <img src="<?php echo $tin_tuc['anh'] ?>">
+	      </div>
+	    </div>
+
+		
+	    <div class="row">
+	    	
 
 	    	<div class="col-25">
 	    		<label for="img">Ảnh mới:</label>
